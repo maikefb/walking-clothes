@@ -1,0 +1,322 @@
+
+@media (max-width: 600px){
+.product--image{
+    width: 323px;
+    height: 313px;
+}
+.product--about{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.product-main--button{
+    width: 300px;
+}
+.tabela{
+    width: 300px;
+}
+.tabela-baixo{
+    padding: 0px;
+}
+.comment--box {
+width: 100%;
+}
+}
+
+@media (min-width: 600px){
+.product--about{
+box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.3);
+}
+.product-armario--dono{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.product-armario--info h2{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.product-armario--dono p{
+    color: #828282;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.product--image{
+    max-width: 516px;
+    height: 576px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.product-main--button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #775ADA;
+    color: white;
+    width: 517px;
+    height: 55px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.tabela {
+    min-width: 513px;
+    max-width: 400px;
+}
+.tabela-baixo {
+    padding-left: 55px;
+}
+.product--bottom{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+}
+.comment--box{
+    width: 40%;
+    max-width: 600px;
+}
+
+}
+.product--image{
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.product--image :first-child{
+     overflow: hidden;
+}
+.product-armario--dono p{
+    font-size: 14px;
+    color: #828282;
+    margin-top: 0;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.product--about{
+    max-width: 610px;
+    height: 710px;
+     padding: 4%;
+}
+.wadrobe--tag{
+    font-size: 14px;
+    margin-left: 10px;
+    background-color:#E0E0E0 ;
+    border-radius: 30px;
+    width: 93.58px;
+    color: #828282;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+button{
+    outline: none;
+}
+input:focus{
+    outline: none;
+}
+.product-armario--info {
+   display: flex;
+   align-items: center;
+}
+
+.product-armario--dono img{
+    margin-right: 10px;
+}
+.product--container{
+    margin-top: 40px;
+    display: flex;
+    max-width: 1286px;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.product--name h3{
+    margin: 0;
+}
+.product--name > :first-child{
+    font-size: 10px;
+    color: #7A7A7A;
+}
+.product-about-header{
+    display: flex;
+    justify-content: space-between;
+}
+.product--name > p{
+    font-size: 12px;
+    color: #FF304F;
+}
+
+.product--price{
+
+    display: flex;
+    align-items: center;
+}
+
+.product--price h2{
+    color: #333333;
+}
+.produto--troca{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: #1F0087;
+    margin-right: 10px;
+}
+.product--disponibility{
+    margin: 0;
+    margin-left: 10px;
+    color: #828282;
+    font-size: 14px;
+}
+
+.product-armario--header> p{
+    width: 65%;
+}
+.dot{
+   height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 7px;
+}
+.product-main--button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #775ADA;
+    color: white;
+    height: 55px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.product-main--button:hover{
+    background-color: #3E239D;
+    cursor: pointer;
+
+}
+
+.green--dot{
+background-color: #27AE60;
+}
+.orange--dot{
+background-color: #F2994A;
+}
+.red--dot{
+background-color: #DD0000;
+}
+.product-main--button:disabled{
+    background-color: gray;
+    cursor: auto;
+}
+.tabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 15px;
+    border: 2px solid #E6E6E6;
+    color: #000;
+}
+
+.tabela-cima, .tabela-baixo {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.tabela-cima {
+    font-size: 16px;
+    border-bottom: 2px solid #E6E6E6;
+}
+
+.tabela-baixo {
+    font-size: 14px;
+}
+
+.texto {
+    margin: 0 20px;
+}
+
+.table--line{
+    content: "";
+    display: block;
+    width: 2px;
+    height: 40px;
+    background: #E6E6E6;
+    margin: 20px 0;
+}
+.produto--descricao{
+    margin-top: 50px;
+}
+.produto--descricao :first-child{
+    font-size: 14px;
+    font-weight: 500;
+    color: #7A7A7A;
+    
+}
+.produto--descricao > p{
+    font-size: 12px;
+
+    
+}
+
+.product-profile--box{
+    width: 50%;
+}
+.comment--box{
+
+    height: 50vh;
+}
+.comment-input--box{
+    display: flex;
+    align-items: center;
+}
+.comment--input{
+    padding-left: 20px;
+    border: none;
+    background-color:#E0E0E0 ;
+    border-radius: 20px;
+    width: 400px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.comment-profile--icon{
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.profile--icon{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%
+}
+
+.comment--button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color:#FF304F;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.comment--button:hover{
+    background-color:#ce3148;
+
+}

@@ -1,0 +1,201 @@
+ 
+ @media (max-width: 640px){
+   .header--util{
+     display: none;
+   }
+  
+ }
+ @media(min-width: 640px){
+.header--util{
+    width: 300px;
+   display: flex;
+   justify-content: space-between;
+  align-items: center;
+ }
+ }
+ .header{
+ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 74px;
+  background: white;
+  top: 0px;
+  display: flex;
+  position: fixed;
+  padding: 0.5% 4% 0.5% 4.5%;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 10;
+  
+ }
+ .sair--header{
+   border: none;
+   text-decoration: none;
+    font-size: 18px;
+    background-color: white;
+ }
+ .sair--header:hover{
+  color: #775ADA;
+  cursor: pointer;
+ }
+
+ .header-logo--image{
+   height: 39px;
+ }
+ .logo-header--title{
+    display: flex;
+    margin-left: 10px;
+    height: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.search--header{
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  align-items: center;
+}
+.logo--header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .header--icons{
+   min-width: 86%;
+   display: flex;
+   justify-content: space-between;
+ }
+ .header--icon {
+   height: 24px;
+ }
+
+.header--button{
+  background-color: white;
+  border: 2px solid black;
+  width: 150px;
+  height: 35px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+.header--button:hover{
+  border: none;
+  background-color: #775ADA;
+  color: white;
+  cursor: pointer;
+}
+
+
+.nav--notificacao{
+  position: relative;
+  top: 56%;
+  transform: translate(-50%, -50%);
+  line-height: 40px;
+  padding: 8px;
+}
+.nav--perfil{
+ position: relative;
+  top: 56%;
+  transform: translate(-50%, -50%);
+  line-height: 40px;
+  padding: 8px;
+
+}
+.nav--carrinho{
+   position: relative;
+   top: 56%;
+  transform: translate(-50%, -50%);
+  line-height: 40px;
+  padding: 8px;
+}
+ 
+.nav--perfil label{
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  display: block;
+  cursor: pointer;
+}
+.button span{
+  float: right;
+  line-height: 40px;
+  transition: 0.5s;
+}
+.nav--perfil ul li span{
+  font-size: 20px;
+  float: right;
+  margin-top: 10px;
+  padding: 0 10px;
+  transition: 0.5s;
+}
+.button span.rotate{
+  transform: rotate(-180deg);
+}
+.nav--perfil ul li span.rotate{
+  transform: rotate(-180deg);
+}
+.nav--perfil ul{
+  position: absolute;
+  list-style: none;
+  right: -12px;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: none;
+}
+.nav--perfil ul ul{
+  position: static;
+}
+[id^=btn]:checked + ul{
+  display: block;
+}
+.menu{
+  padding: 0;
+  background-color: white;
+}
+.nav--perfil .menu:before{
+  border-top: 1px  solid black;
+  border-left: 1px  solid black;
+  position: absolute;
+  background-color: #ffff;
+  content: '';
+  height: 20px;
+  width: 20px;
+  right: 20px;
+  top: -11px;
+  transform: rotate(45deg);
+  z-index: 10;
+  
+}
+.nav--perfil ul li{
+  line-height: 40px;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.nav--perfil ul li label{
+  font-size: 18px;
+}
+.nav--perfil ul li a{
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+.nav--perfil ul ul li a{
+  color: #000;
+  font-size: 17px;
+}
+.nav--perfil ul li a:hover,
+.nav--perfil ul li label:hover{
+  color: #775ADA ;
+}
+
+.nav--perfil ul ul li{
+  line-height: 30px;
+  padding-left: 30px;
+  border-bottom: none;
+}
+
+.input--click{
+  display: none;
+} 

@@ -1,0 +1,163 @@
+@media (max-width: 640px) {
+  .armario--div {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 6% 2% 6%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    max-width: 1241px;
+  }
+
+  .armario--button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    order: 1;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .armario--button button {
+    width: 200px;
+  }
+  .armario--roupas {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  .armario--roupa {
+    min-width: 285px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .armario--info h2 {
+    font-size: 18px;
+    font-weight: 900;
+  }
+  .product-armario--dono p {
+    margin-top: 10px;
+  }
+  .container {
+    padding-top: 15%;
+  }
+}
+
+@media (min-width: 640px) {
+  .armario--button button {
+    width: 130px;
+  }
+  .armario--div {
+    padding: 1% 3% 2% 3%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    max-width: 1241px;
+  }
+  .armario--roupas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .armario--roupa {
+    margin-top: 20px;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .armario--info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container {
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+.container {
+  margin: 0 auto;
+  width: 85%;
+  color:#333333;
+}
+.dashboard--container {
+  /* padding: 3.5% 6.5% 1% 6.8%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.armario--div {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.armario--header {
+  flex-grow: 1;
+}
+
+.armario--button {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  align-items: center;
+}
+.armario--button h4 {
+  margin-right: 20px;
+  color: #828282;
+}
+
+.armario-button:hover {
+  background-color: #3e239d;
+  cursor: pointer;
+}
+
+.armario--button button {
+  border: none;
+  background-color: #775ada;
+  color: white;
+  height: 35px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+.armario--dono {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.armario--dono p {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  color: #828282;
+  margin: 0;
+}
+.carregar-mais--button {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px;
+  font-weight: bold;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 30px;
+}
+.carregar-mais--button:hover {
+    border: none;
+  background-color: #775ADA;
+  color: white;
+  cursor: pointer;
+}
+
+.page--dashboard{
+    height: 30px;
+    width: fit-content;
+    display: flex;
+}

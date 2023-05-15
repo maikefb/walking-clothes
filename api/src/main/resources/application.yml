@@ -1,0 +1,58 @@
+server:
+  port: 8080
+error:
+    include-message: always
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: validate
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 670777911781-jrs652rk42sgft45vbacqhq2vj5imeji.apps.googleusercontent.com
+            clientSecret: pfdiNxoUiuY7LQ4EQaZh2oCu
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+          facebook:
+            clientId: 896656204072626
+            clientSecret: 22e0115fa8f3bd0e5f2f6dd654d19e91
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}" # Note that facebook now mandates the use of https redirect URIs, so make sure your app supports https in production
+            scope:
+              - email
+              - public_profile
+        provider:
+          facebook:
+            authorizationUri: https://www.facebook.com/v3.0/dialog/oauth
+            tokenUri: https://graph.facebook.com/v3.0/oauth/access_token
+            userInfoUri: https://graph.facebook.com/v3.0/me?fields=id,first_name,middle_name,last_name,name,email,verified,is_verified,picture.width(250).height(250)
+  datasource:
+    hikari:
+      maximum-pool-size: 3
+
+    username: ALUNO30_CRE
+    password: ALUNO30_CRE
+    url: jdbc:oracle:thin:@10.99.220.86:1521:ORCL
+    driver-class-name: oracle.jdbc.OracleDriver
+
+
+
+app:
+  auth:
+    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+    tokenExpirationMsec: 864000000
+  oauth2:
+    authorizedRedirectUris:
+      - https://walking-clothes.cwi.com.br/oauth2/redirect
+      - http://localhost:3000/oauth2/redirect
+      - myandroidapp://oauth2/redirect
+      - myiosapp://oauth2/redirect
+

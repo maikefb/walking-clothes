@@ -1,0 +1,23 @@
+.armario--container{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.main--container{
+    padding: 5% 0% 1% 2%;
+     margin: 0 auto;
+  width: 85%;
+  color:#333333;
+}
+.itens--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+    width: 103%;
+}
+.container{
+    padding-top: 100px;
+}

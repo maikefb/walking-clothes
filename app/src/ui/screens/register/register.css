@@ -1,0 +1,42 @@
+
+@media (max-width: 1060px){
+    .register--box {
+    padding: 3%;
+}
+}
+@media (min-width: 1060px){
+.register--box {
+    width: 80%;
+}
+}
+.register--box {
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.register--card{
+    text-align: center;
+    width: 396px;
+    color: #160748;
+}
+
+.register--image{
+    max-width: 500px;
+    object-fit: contain;
+}
+.register--image img {
+    width: 100%;
+}
+.commom-primary--button{
+    background-color :#775ADA ;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+.commom-primary--button:hover{
+    background-color: #3E239D;
+    cursor: pointer;
+}

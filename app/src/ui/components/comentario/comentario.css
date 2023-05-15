@@ -1,0 +1,44 @@
+.comentario--box{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.comentario--p{
+    color: #4F4F4F;
+}
+.comentario--box-header{
+    display: flex;
+    align-items: center;
+    align-content: center;   
+}
+.responder--comentario{
+    border: none;
+    color: #4F4F4F;
+    background-color: white;
+    font-weight: bold;
+}
+.responder--comentario:hover{
+cursor: pointer;
+}
+.vendedor--comentario {
+    text-align: center;
+    font-size: 10px;
+}
+.perfil-comentario-info{
+    align-items: center;
+    display: flex;
+    justify-items: end;
+    text-align: end;
+    flex-direction: column;
+    color: #775ADA;
+}
+.botoes--comentario{
+    display: flex;
+
+    align-items: center;
+}
+
+.mensagem-texto-div{
+    margin-left: 20px;
+}

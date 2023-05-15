@@ -1,0 +1,136 @@
+@media (min-width: 1060px){
+.social--login{
+    padding: 20px 20px 28px;
+}
+.login--box {
+    padding: 20px 20px 10px;
+
+}
+.recuperar--link {
+
+    width: 50%;
+}
+}
+
+@media (max-width: 1060px){
+.register--box{
+    width: 100%;
+}
+.social--login{
+    padding: 0;
+}
+
+.register--image{
+  display: none;
+}
+.login--card{
+    margin: 0 auto;
+    align-self: center;
+}
+.login--box{
+    padding-top: 20px;
+
+}
+.recuperar--link{
+    width: 100%;
+}
+}
+.login--card {
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+    width: 396px;
+}
+
+.login--card a{
+    text-decoration: none;
+}
+.recuperar--link {
+    margin-top: 20px;
+    align-self: center;
+
+    color: #3d5af1;
+    text-decoration: none;
+}
+
+.recuperar--link:hover {
+    text-decoration: underline;
+}
+
+.login--box {
+    display: flex;
+    flex-direction: column;
+
+}
+.register--button{
+    background-color :#FF304F;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+.register--button:hover{
+    background-color :#ce3148;
+    cursor: pointer;
+ 
+}
+.login--input{
+    height: 35px;
+    font-size: 17px;
+    margin-bottom: 10px;
+    padding: 7px;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 6px;
+    
+}
+.login--input:focus{
+    outline-color: #28c7fa;
+}
+.social--login{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.facebook--button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+     background-color :#3d5af1;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+.google--button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.75);
+
+}
+.google--button img{
+    width: 40px
+}
+.google--button:hover{
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+   
+}
+.facebook--button:hover{
+    cursor: pointer;
+    background-color:#334394;
+}

@@ -1,0 +1,113 @@
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')), disableConcurrentBuilds(), pipelineTriggers([])])
+
+stage('Evaluating') {
+    
+    switch(env.BRANCH_NAME) {
+        case "master":  env_type = "production"; break;
+        default:        env_type = "undefined";  break;
+    }
+    
+    env_is_defined = "$env_type" != "undefined"
+    currentBuild.result = 'SUCCESS'
+}
+
+// App settings
+def app_name = "walking-clothes-app"
+def acess_port = "9013:80"
+def tag = "crescer/${app_name}"
+def docker_image = "${app_name}.tar"
+def url = "https://walking-clothes.cwi.com.br"
+
+try {
+    node('master') {
+        
+        stage('Checkout') {
+            checkout scm
+            commiter = sh(returnStdout: true, script: "git show -s --pretty=%an").trim()
+        }
+
+        docker.image('node:8.12-jessie').inside('-v /var/lib/jenkins/.npm:/root/.npm -u root') {
+
+            stage('Install') {
+                dir("app") {
+                    sh "npm install"
+                    // GAMBIARRA
+                    sh "find src/ -type f -name '*.js' -o -name '*.jsx' | xargs sed -i '1s;^;// @flow\\n;'"
+                }
+            }
+
+            stage('Sonar') {
+                dir("app") {
+                    if(env_is_defined) {
+                        withCredentials([string(credentialsId: 'sonar-token', variable: 'TOKEN')]) {
+                            
+                            sh "./node_modules/sonarqube-scanner/dist/bin/sonar-scanner \
+                                    -Dsonar.sources=src \
+                                    -Dsonar.login=${TOKEN} \
+                                    -Dsonar.sourceEncoding='UTF-8' \
+                                    -Dsonar.host.url='https://sonar-crescer-hlg.cwi.com.br'"
+                        }
+                    } else {
+                        echo "Esse step só executa em branches que são publicadas..."
+                    }
+                }
+            }
+
+            stage('Build') {
+                dir("app") {
+                    sh "REACT_APP_API_URL=${url}/api npm run build"
+                }
+            }
+        }
+    }
+
+    if(env_is_defined) {
+
+        node("master") {
+            
+            stage('Build Image') {
+                dir("app") {
+                    sh "docker build --tag $tag ."
+                }
+            }
+
+            stage('Deploy Service') {
+                sh "docker save $tag > $docker_image"
+                stash includes: docker_image, name: app_name
+                stash includes: '**/nginx.conf', name: 'nginx'
+            }
+
+            node("producao") {
+
+                stage('Remove Service') {
+                    sh "docker rm -f $app_name | true"
+                }
+
+                stage('Start Service') {
+                    unstash app_name
+                    sh "docker load < $docker_image"
+                    sh """docker run \
+                            --name $app_name \
+                            -v /crescer/nginx:/etc/nginx/conf.d:ro \
+                            -p $acess_port \
+                            -d $tag"""
+                }
+
+                stage('Nginx Config') {
+                    unstash 'nginx'
+
+                    dir("app") {
+                        sh "sudo cp nginx.conf /etc/nginx/sites-available/walking-clothes.cwi.com.br"
+
+                        sh """sudo ln -sfn /etc/nginx/sites-available/walking-clothes.cwi.com.br \
+                                           /etc/nginx/sites-enabled/walking-clothes.cwi.com.br"""
+                    }
+                } 
+            }
+        }
+    }
+} catch (Exception err) {
+
+    echo "Build Failed: ${err}"
+    currentBuild.result = 'FAILURE'
+}

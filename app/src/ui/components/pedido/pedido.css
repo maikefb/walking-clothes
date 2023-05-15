@@ -1,0 +1,26 @@
+  .pedido-vendedor-info{
+ display: flex;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  color: #828282;
+  margin: 0;
+  }
+   .pedido-vendedor-info img{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+ .mensagens--div{
+   display: flex;
+   flex-direction: column;
+   background-color: #f7f7f7;
+   overflow-x: hidden;
+ }
+  .mensagens--div::-webkit-scrollbar{
+    width: 10px;
+
+ }
+  .mensagens--div::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background:rgba(0,0,0,.1)
+ }

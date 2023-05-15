@@ -1,0 +1,23 @@
+.mensagem-texto-box{
+    background-color: #f7f7f7;
+    padding: 2% 0% 4% 4%;
+    display: flex;
+    justify-content: center;
+}
+.send--button{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color:#775ADA;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.send--button:hover{
+    background-color:#3E239D;
+    cursor: pointer;
+}

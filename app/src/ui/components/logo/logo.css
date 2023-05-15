@@ -1,0 +1,12 @@
+.logo--title{
+    display: flex;
+    margin-left: 10px;
+    height: 40px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
